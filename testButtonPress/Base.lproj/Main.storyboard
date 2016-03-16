@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="COn-Ea-zTa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Slider View Controller-->
+        <scene sceneID="Uvi-5m-cBE">
+            <objects>
+                <viewController id="0Mc-66-tAb" customClass="SliderViewController" customModule="Monocots_and_Dicots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5LT-Vv-Mjd"/>
+                        <viewControllerLayoutGuide type="bottom" id="329-1q-vcY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="me2-13-5fC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="35" maxValue="520" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-DD-CHU">
+                                <rect key="frame" x="18" y="590" width="988" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6kb-do-fEF"/>
+                                    <constraint firstAttribute="width" constant="984" id="dLx-Qs-fUm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderHasChanged:" destination="0Mc-66-tAb" eventType="valueChanged" id="7lz-nu-wSQ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn about the history of plants! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JG-mG-ug9">
+                                <rect key="frame" x="661" y="85" width="343" height="497"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-p4-SB0">
+                                <rect key="frame" x="20" y="72" width="633" height="510"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-AS-FXY">
+                                <rect key="frame" x="352" y="698" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slide the bar to learn the history of plants!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxl-1A-5Dp">
+                                <rect key="frame" x="352" y="649" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vH3-DD-CHU" firstAttribute="centerY" secondItem="me2-13-5fC" secondAttribute="centerY" constant="221" id="J71-GG-l4i"/>
+                            <constraint firstItem="vH3-DD-CHU" firstAttribute="centerX" secondItem="me2-13-5fC" secondAttribute="centerX" id="cmi-yr-F2L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hlu-VL-re8">
+                        <barButtonItem key="rightBarButtonItem" title="To the Quiz!" id="AsL-gb-qxr">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="hUk-u9-uYw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="myaLabel" destination="O4l-AS-FXY" id="ArM-EV-eOA"/>
+                        <outlet property="sliderImageView" destination="W4C-p4-SB0" id="6vZ-6M-89o"/>
+                        <outlet property="sliderTextView" destination="4JG-mG-ug9" id="AVn-Yz-ka7"/>
+                        <outlet property="sliderYearView" destination="Wxl-1A-5Dp" id="Mg6-zY-3Zw"/>
+                        <outlet property="timeSliderBar" destination="vH3-DD-CHU" id="SbZ-7z-A8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbm-u5-IbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tCi-RV-aFG">
+            <objects>
+                <viewController id="YwU-o5-ZCC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rN5-qr-fzy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xpq-O5-TFq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U47-TR-xKX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monocot_vs_dicot" translatesAutoresizingMaskIntoConstraints="NO" id="rqJ-6x-pSJ">
+                                <rect key="frame" x="20" y="72" width="984" height="529"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="529" id="9SB-8h-G73"/>
+                                    <constraint firstAttribute="width" constant="984" id="cQZ-4B-I8S"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlm-th-ciB">
+                                <rect key="frame" x="20" y="661" width="984" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="984" id="eKL-3J-WIX"/>
+                                    <constraint firstAttribute="height" constant="71" id="y60-el-yFb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Learn about the history of plants!"/>
+                                <connections>
+                                    <segue destination="0Mc-66-tAb" kind="show" identifier="showSliderBal" id="u5l-NW-sHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rqJ-6x-pSJ" firstAttribute="centerY" secondItem="U47-TR-xKX" secondAttribute="centerY" constant="-47.5" id="Wwu-Ju-uVD"/>
+                            <constraint firstItem="jlm-th-ciB" firstAttribute="centerX" secondItem="U47-TR-xKX" secondAttribute="centerX" id="XxH-RU-Efc"/>
+                            <constraint firstItem="rqJ-6x-pSJ" firstAttribute="centerX" secondItem="U47-TR-xKX" secondAttribute="centerX" id="fEY-iy-V8S"/>
+                            <constraint firstItem="jlm-th-ciB" firstAttribute="centerY" secondItem="U47-TR-xKX" secondAttribute="centerY" constant="312.5" id="vtF-SW-ShE"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhx-4c-VcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="-477"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="6xF-ex-Wa6">
+            <objects>
+                <viewController id="aHv-E4-7TD" customClass="IntroViewController" customModule="Monocots_and_Dicots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pfs-hG-R4h"/>
+                        <viewControllerLayoutGuide type="bottom" id="afD-PZ-lFf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vio-w0-VCj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocn-GI-EuR">
+                                <rect key="frame" x="20" y="693" width="984" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Learn about monocots and dicots"/>
+                                <connections>
+                                    <action selector="advanceToSlider:" destination="aHv-E4-7TD" eventType="touchUpInside" id="fk0-xE-8fW"/>
+                                    <segue destination="YwU-o5-ZCC" kind="show" identifier="showMonoDicotPanel" id="0dB-gg-aL5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maize" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-SQ-oPX">
+                                <rect key="frame" x="20" y="64" width="327" height="397"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coconut" translatesAutoresizingMaskIntoConstraints="NO" id="tPA-3J-vNR">
+                                <rect key="frame" x="355" y="64" width="327" height="397"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tomato" translatesAutoresizingMaskIntoConstraints="NO" id="kR5-s3-7dm">
+                                <rect key="frame" x="690" y="64" width="327" height="397"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3j-DK-4mJ">
+                                <rect key="frame" x="20" y="520" width="994" height="165"/>
+                                <string key="text">In this app, you will learn about the evolution of plants, from tiny plants that lived before the dinosaurs, to the modern grasses and trees we have today.  You will also see when the first monocots and dicots appeared!  Aferwards, you will take a quiz to see how well you can identify the monocots and dicots we have today.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7Y-Hh-DfQ">
+                                <rect key="frame" x="15" y="469" width="994" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="4Cz-sK-WDx"/>
+                                    <constraint firstAttribute="width" constant="994" id="RZw-ng-FKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7Y-Hh-DfQ" firstAttribute="centerX" secondItem="Vio-w0-VCj" secondAttribute="centerX" id="F5o-MM-rw6"/>
+                            <constraint firstItem="T7Y-Hh-DfQ" firstAttribute="centerY" secondItem="Vio-w0-VCj" secondAttribute="centerY" constant="112.5" id="e4x-xE-cCy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WFo-Gr-mJx"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ug-b9-uAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="957"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Monocots_and_Dicots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-HE-wSA">
+                                <rect key="frame" x="20" y="72" width="302" height="533"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="Fv9-O4-YGA"/>
+                                    <constraint firstAttribute="width" constant="302" id="hx9-Ai-OD9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-DN-JoD">
+                                <rect key="frame" x="702" y="72" width="302" height="533"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="6z8-LK-Iyb"/>
+                                    <constraint firstAttribute="width" constant="302" id="Sd6-Xb-GXE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maize" translatesAutoresizingMaskIntoConstraints="NO" id="lam-nI-8Ef">
+                                <rect key="frame" x="363" y="72" width="302" height="533"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="Mjg-yj-V1d"/>
+                                    <constraint firstAttribute="height" constant="533" id="QMY-gQ-gPU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veU-1G-t7H">
+                                <rect key="frame" x="280" y="672" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hwb-na-BMd"/>
+                                    <constraint firstAttribute="width" constant="127" id="iwz-gh-cq1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Monocot"/>
+                                <connections>
+                                    <action selector="cotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAL-GQ-Evt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzR-wN-ZhB">
+                                <rect key="frame" x="630" y="672" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Dt9-Pc-jqh"/>
+                                    <constraint firstAttribute="height" constant="30" id="mGL-Hy-SsD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Dicot"/>
+                                <connections>
+                                    <action selector="cotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSd-B7-3CE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-mQ-QFT">
+                                <rect key="frame" x="484" y="718" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="24E-p6-vag"/>
+                                    <constraint firstAttribute="width" constant="66" id="2Nh-T5-JGm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Hint"/>
+                                <connections>
+                                    <action selector="hintButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMk-im-3yL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="veU-1G-t7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-168.5" id="6IR-em-9PC"/>
+                            <constraint firstItem="Ka6-DN-JoD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="341" id="87h-OB-tiH"/>
+                            <constraint firstItem="ncd-HE-wSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-341" id="9j4-Pw-MTo"/>
+                            <constraint firstItem="AzR-wN-ZhB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="303" id="ACb-Uq-RRR"/>
+                            <constraint firstItem="ncd-HE-wSA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-45.5" id="Ff6-yL-NhT"/>
+                            <constraint firstItem="vNO-mQ-QFT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="349" id="G1S-xV-8kl"/>
+                            <constraint firstItem="AzR-wN-ZhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="175" id="MSo-OK-OQ4"/>
+                            <constraint firstItem="veU-1G-t7H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="303" id="YNa-a9-kKn"/>
+                            <constraint firstItem="Ka6-DN-JoD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-45.5" id="YRv-rx-Rel"/>
+                            <constraint firstItem="lam-nI-8Ef" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-45.5" id="fm3-ZK-Mj5"/>
+                            <constraint firstItem="vNO-mQ-QFT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5" id="pUM-Jd-WNz"/>
+                            <constraint firstItem="lam-nI-8Ef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="v5v-w5-tDu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CUG-KF-ZnQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="firstHint" destination="Ka6-DN-JoD" id="LLZ-45-2LM"/>
+                        <outlet property="hintButton" destination="vNO-mQ-QFT" id="P6X-xM-VqY"/>
+                        <outlet property="secondHint" destination="ncd-HE-wSA" id="36T-om-Yos"/>
+                        <outlet property="startImage" destination="lam-nI-8Ef" id="G0u-wJ-kJO"/>
+                        <segue destination="JH3-3m-ox6" kind="showDetail" identifier="segueToScoreViewController" action="showViewController:sender:" id="8Ja-mr-tI5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2420" y="429"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="ngi-RB-c9Q">
+            <objects>
+                <viewController id="JH3-3m-ox6" customClass="ScoreViewController" customModule="Monocots_and_Dicots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XpH-Rq-Gd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="tQM-BJ-K5u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPg-pf-Kjt">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjv-Wf-8kU">
+                                <rect key="frame" x="20" y="223" width="984" height="47"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trw-Sq-2co">
+                                <rect key="frame" x="20" y="319" width="984" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="introTextLabel" destination="Pjv-Wf-8kU" id="uTj-6N-W0C"/>
+                        <outlet property="scoreTextLabel" destination="trw-Sq-2co" id="BcD-iP-iBK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mD3-16-RRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3521" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="24n-DN-e1C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="COn-Ea-zTa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o9F-SV-avt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aHv-E4-7TD" kind="relationship" relationship="rootViewController" id="9Sy-I3-Vk3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0d-pI-khZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coconut" width="291" height="537"/>
+        <image name="maize" width="761" height="1014"/>
+        <image name="monocot_vs_dicot" width="968" height="530"/>
+        <image name="tomato" width="535" height="997"/>
+    </resources>
+</document>
